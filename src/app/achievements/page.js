@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState } from "react"
+import Image from "next/image"
 import { Oxanium, Montserrat } from "next/font/google"
 
 const oxanium = Oxanium({
@@ -51,7 +52,7 @@ const AchievementCard = ({ imageUrl, gridClass }) => {
     <div className={`${gridClass} relative w-full h-full`}>
       <div className="absolute inset-0 bg-[#0C0C0C] rounded-[20px] transition-transform duration-300 ease z-[2]"></div>
       <div className="absolute top-[10px] left-[-10px] w-[calc(100%-10px)] h-[calc(100%-10px)] rounded-[20px] overflow-hidden z-[5]">
-        <img src={imageUrl} alt="Achievement" className="w-full h-full object-cover block" />
+        <Image src={imageUrl} alt="Achievement" fill className="object-cover block" />
       </div>
     </div>
   )
@@ -68,7 +69,7 @@ const PlacementCard = ({ data }) => {
   return(
     <div className="w-full rounded-[15px] xs:rounded-[20px] sm:rounded-[25px] lg:rounded-[40px] overflow-hidden p-[10px] xs:p-[12px] sm:p-[15px] text-white border border-[rgba(255,255,255,0.1)]" style={{ background: "linear-gradient(-135deg, #194242, #05100f, #0e0e0e 85%, #0b2727, #073535)" }}>
       <div className="w-full pt-[100%] relative overflow-hidden rounded-[10px] xs:rounded-[12px] sm:rounded-[15px]">
-        <img src={data.imageUrl} alt={data.name} className="absolute top-0 left-0 w-full h-full object-cover block" />
+        <Image src={data.imageUrl} alt={data.name} fill className="object-cover block" />
       </div>
       <div className="pt-[10px] xs:pt-[12px] sm:pt-[15px]">
         <h3 className={`${oxanium.className} text-[1rem] xs:text-[1.2rem] sm:text-[1.3rem] lg:text-[1.5rem] m-0 font-bold line-clamp-1`}>{data.name}</h3>
@@ -77,7 +78,7 @@ const PlacementCard = ({ data }) => {
           <div className="flex items-center gap-[6px] xs:gap-[8px] sm:gap-[10px]">
             <LinkedinIcon />
             <InstagramIcon />
-            <img src="/mdi_github.svg" alt="GitHub" className="w-[20px] h-[20px] xs:w-[24px] xs:h-[24px] sm:w-[28px] sm:h-[28px] lg:w-[30px] lg:h-[30px] block flex-shrink-0" />
+            <Image src="/mdi_github.svg" alt="GitHub" width={30} height={30} className="w-[20px] h-[20px] xs:w-[24px] xs:h-[24px] sm:w-[28px] sm:h-[28px] lg:w-[30px] lg:h-[30px] block flex-shrink-0" />
           </div>
           <span className="bg-[#33334f] px-[5px] py-[2px] xs:px-[6px] xs:py-[3px] sm:px-[8px] sm:py-[4px] rounded-[6px] xs:rounded-[8px] sm:rounded-[10px] font-semibold text-[0.65rem] xs:text-[0.7rem] sm:text-[0.75rem] lg:text-[0.8rem] whitespace-nowrap">{data.company}</span>
         </div>
@@ -90,7 +91,7 @@ const HackathonCard = ({ data, onViewMore }) => {
   return(
     <div className="w-full h-[340px] xs:h-[380px] sm:h-[400px] lg:h-[440px] rounded-[15px] xs:rounded-[20px] sm:rounded-[25px] lg:rounded-[40px] overflow-hidden p-[10px] xs:p-[12px] sm:p-[15px] text-white border border-[rgba(255,255,255,0.1)]" style={{ background: "linear-gradient(-135deg, #194242, #05100f, #0e0e0e 85%, #0b2727, #073535)" }}>
       <div className="w-full pt-[100%] relative overflow-hidden rounded-[10px] xs:rounded-[12px] sm:rounded-[15px]">
-        <img src={data.imageUrl} alt={data.name} className="absolute top-0 left-0 w-full h-full object-cover block" />
+        <Image src={data.imageUrl} alt={data.name} fill className="object-cover block" />
       </div>
       <div className="pt-[10px] xs:pt-[12px] sm:pt-[15px]">
         <h3 className={`${oxanium.className} text-[1rem] xs:text-[1.2rem] sm:text-[1.3rem] lg:text-[1.5rem] m-0 font-bold line-clamp-1`}>{data.name}</h3>
@@ -98,7 +99,7 @@ const HackathonCard = ({ data, onViewMore }) => {
           <div className="flex items-center gap-[6px] xs:gap-[8px] sm:gap-[10px]">
             <LinkedinIcon />
             <InstagramIcon />
-            <img src="/mdi_github.svg" alt="GitHub" className="w-[20px] h-[20px] xs:w-[24px] xs:h-[24px] sm:w-[28px] sm:h-[28px] lg:w-[30px] lg:h-[30px] block flex-shrink-0" />
+            <Image src="/mdi_github.svg" alt="GitHub" width={30} height={30} className="w-[20px] h-[20px] xs:w-[24px] xs:h-[24px] sm:w-[28px] sm:h-[28px] lg:w-[30px] lg:h-[30px] block flex-shrink-0" />
           </div>
           <button onClick={() => onViewMore(data)} className="bg-[#33334f] px-[5px] py-[2px] xs:px-[6px] xs:py-[3px] sm:px-[8px] sm:py-[4px] rounded-[6px] xs:rounded-[8px] sm:rounded-[10px] font-semibold text-[0.65rem] xs:text-[0.7rem] sm:text-[0.75rem] lg:text-[0.8rem] whitespace-nowrap border-2 border-[rgba(255,255,255,0.01)] hover:border-[rgba(255,255,255,0.1)] transition-all duration-200">
             View More +
@@ -169,7 +170,7 @@ const AchievementsPage = () => {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 xs:gap-3 sm:gap-4 max-w-[1200px] mx-auto">
           {achievementsData.slice(0, 12).map((achievement) => (
             <div key={achievement.id} className="relative w-full aspect-square rounded-[12px] sm:rounded-[15px] overflow-hidden shadow-lg">
-              <img src={achievement.imageUrl} alt="Achievement" className="w-full h-full object-cover" />
+              <Image src={achievement.imageUrl} alt="Achievement" fill className="object-cover" />
             </div>
           ))}
         </div>
@@ -204,8 +205,8 @@ const AchievementsPage = () => {
       {selectedCard && (
         <div className="fixed inset-0 z-50 flex justify-center items-center backdrop-blur-sm bg-black/80 p-3 xs:p-4">
           <div className="relative w-full max-w-[95vw] xs:max-w-[90vw] sm:max-w-[620px] h-auto sm:h-auto rounded-2xl xs:rounded-3xl sm:rounded-4xl overflow-hidden p-3 xs:p-4 sm:p-5 flex flex-col sm:flex-row gap-3 xs:gap-4 text-white border border-white/22 bg-gradient-to-br from-white/10 to-white/10 backdrop-blur-md shadow-xl bg-[linear-gradient(18deg,rgba(14,14,14,0.6),rgba(5,16,15,0.6),rgba(25,66,66,0.6))]">
-            <div className="w-full sm:w-48 md:w-56 h-48 xs:h-56 sm:h-auto sm:aspect-square rounded-xl xs:rounded-2xl overflow-hidden flex-shrink-0 mx-auto sm:mx-0">
-              <img src={selectedCard.imageUrl} alt={selectedCard.name} className="w-full h-full object-cover" />
+            <div className="w-full sm:w-48 md:w-56 h-48 xs:h-56 sm:h-auto sm:aspect-square rounded-xl xs:rounded-2xl overflow-hidden flex-shrink-0 mx-auto sm:mx-0 relative">
+              <Image src={selectedCard.imageUrl} alt={selectedCard.name} fill className="object-cover" />
             </div>
             <div className="flex flex-col flex-1 min-h-0">
               <h3 className="text-base xs:text-lg sm:text-xl font-semibold mb-2 line-clamp-1">{selectedCard.name}</h3>
@@ -215,7 +216,7 @@ const AchievementsPage = () => {
               </ul>
               <div className="flex flex-col xs:flex-row sm:flex-row justify-between items-start xs:items-center sm:items-center mt-auto border-t border-white/10 pt-2 xs:pt-3 gap-2 xs:gap-3 sm:gap-0">
                 <div className="flex items-center gap-2 xs:gap-3">
-                  <img src="/mdi_github.svg" alt="GitHub" className="w-5 h-5 xs:w-6 xs:h-6 sm:w-7 sm:h-7" />
+                  <Image src="/mdi_github.svg" alt="GitHub" width={28} height={28} className="w-5 h-5 xs:w-6 xs:h-6 sm:w-7 sm:h-7" />
                   <LinkedinIcon />
                   <InstagramIcon />
                 </div>

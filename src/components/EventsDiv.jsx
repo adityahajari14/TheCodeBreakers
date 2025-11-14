@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 const EventsDiv = ({ eventName, eventDate, imageUrl, description, isLast = false, isActive = true }) => {
   return (
@@ -24,11 +25,12 @@ const EventsDiv = ({ eventName, eventDate, imageUrl, description, isLast = false
         </div>
       </div>
       <div className={`flex flex-row gap-6 mt-6 pr-[200px] transition-all duration-700 ${isActive ? 'opacity-100' : 'opacity-30'}`}>
-        <img 
+        <Image 
           className="w-[20vw] h-auto aspect-square object-cover rounded-xl" 
           src={imageUrl} 
           alt={`${eventName} event`}
-          loading="lazy"
+          width={400}
+          height={400}
         />
         <div className="justify-end flex flex-col text-2xl font-normal font-['Montserrat'] w-[40%]">
           {description}

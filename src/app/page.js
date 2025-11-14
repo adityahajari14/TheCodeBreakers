@@ -141,9 +141,11 @@ export default function HomePage() {
 
                         <div className="flex-1 flex justify-end">
                             <div className="h-60 w-60 md:h-74 md:w-74 rounded-3xl overflow-hidden">
-                                <img
+                                <Image
                                     src="/carousel/sample_img.png"
                                     alt="Who We Are"
+                                    width={296}
+                                    height={296}
                                     className="h-full w-full object-cover"
                                 />
                             </div>

@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -18,14 +18,14 @@ export default function Carousel() {
   const timeoutRef = useRef(null);
   const length = carouselImages.length;
 
-  const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % length);
+  const nextSlide = useCallback(() => setCurrentIndex((prev) => (prev + 1) % length), [length]);
   const prevSlide = () => setCurrentIndex((prev) => (prev - 1 + length) % length);
 
   // Auto-scroll every 3 seconds
   useEffect(() => {
     timeoutRef.current = setTimeout(nextSlide, 3000);
     return () => clearTimeout(timeoutRef.current);
-  }, [currentIndex]);
+  }, [currentIndex, nextSlide]);
 
   const getPositionStyle = (index) => {
     const diff = (index - currentIndex + length) % length;
