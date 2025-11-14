@@ -101,7 +101,7 @@ export default function Carousel() {
                   src={src}
                   alt={`carousel-${index}`}
                   fill
-                  style={{ objectFit: "cover" }}
+                  style={{ objectFit: "fill" }}
                   className="rounded-2xl"
                 />
               </div>

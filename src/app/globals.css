@@ -53,3 +53,10 @@ h6 {
 .buttonFooter{
   background: linear-gradient(140deg, #7E7E7E 2%, rgb(34,34,34) 12.22%, rgb(34,34,34) 82.77%, #3F3F3F 98%);
 }
+.buttonBorder{
+  background: linear-gradient(140deg, #7E7E7E 5%, rgb(34,34,34) 15%, rgb(34,34,34) 75%, #3F3F3F 98%);
+}
+
+.divBorder{
+  background: linear-gradient(50deg, #848484b9 2%, rgb(34,34,34) 12.22%, rgb(34,34,34) 82%, #848484b9 98%);
+}
