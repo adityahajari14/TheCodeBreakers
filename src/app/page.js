@@ -5,6 +5,7 @@ import gsap from "gsap";
 import Capsule from "@/components/home/Capsule";
 import Bento from "@/components/home/Bento";
 import Carousel from "@/components/home/Carousel";
+import LiquidEther from "@/components/home/LiquidEther";
 
 const icons = [
     { src: "/icons/react.svg", x: -450, y: 50 },
@@ -63,10 +64,9 @@ export default function HomePage() {
             {/* Hero Section */}
             <main
                 className="relative flex items-center justify-center h-screen bg-black overflow-hidden text-white bg-cover"
-                style={{ backgroundImage: "url('/bg_hero.svg')" }}
             >
                 {/* Floating Tech Icons */}
-                <div className="absolute w-full h-full flex items-center justify-center">
+                <div className="absolute w-full h-full flex items-center justify-center z-9">
                     {icons.map((icon, i) => (
                         <div
                             key={i}
@@ -103,6 +103,25 @@ export default function HomePage() {
                         <div className="absolute left-[0.3px] right-[0.3px] top-[0.3px] bottom-[0.3px] z-3 rounded-3xl m-[1.2px] bg-[linear-gradient(99deg,rgba(85,85,85,0.40)_9.65%,rgba(66,66,66,0.40)_93.31%)] shadow-[0_16.455px_16.455px_0_rgba(0,0,0,0.25),250.932px_497.75px_156.318px_0_rgba(0,0,0,0.04),90.5px_176.886px_119.295px_0_rgba(0,0,0,0.10),8.227px_20.568px_49.364px_0_rgba(0,0,0,0.15)]"></div>
                         <p className="font-['Montserrat'] text-sm font-semibold text-white z-4">Explore Now</p>
                     </button>
+                </div>
+                <div className="absolute w-full h-full flex items-center justify-center">
+                    <LiquidEther
+                        colors={[ '#073445', '#41bfb7', '#073445' ]}
+                        mouseForce={20}
+                        cursorSize={100}
+                        isViscous={true}
+                        viscous={30}
+                        iterationsViscous={32}
+                        iterationsPoisson={32}
+                        resolution={0.5}
+                        isBounce={true}
+                        autoDemo={true}
+                        autoSpeed={0.3}
+                        autoIntensity={3}
+                        takeoverDuration={1}
+                        autoResumeDelay={1000}
+                        autoRampDuration={0.6}
+                    />
                 </div>
             </main>
 
@@ -189,11 +208,10 @@ export default function HomePage() {
             {/* Moments Section */}
             <div className="py-20 bg-black text-[#C1C1C1] text-center">
                 <h1
-                    className={`font-['Oxanium'] text-5xl font-bold mb-2 text-center`}
+                    className={`font-['Oxanium'] text-5xl font-bold mb-4 text-center text-transparent bg-[linear-gradient(180deg,_#FFF_0%,_#999_70%)] bg-clip-text`}
                 >
                     Moments at TheCodeBreakers
                 </h1>
-
                 <Carousel />
             </div>
         </>

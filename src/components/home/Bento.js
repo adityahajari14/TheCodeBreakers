@@ -1,133 +1,134 @@
 import { Montserrat } from "next/font/google";
+import Image from "next/image";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
 
-// Simple Card component with consistent styling
-const BentoCard = ({ children, width = '400px' }) => (
+// Data object for all bento cards
+const bentoData = {
+    tech: [
+        [
+            {
+                title: "Web Development",
+                description: "Bring your ideas to life by building web apps and master the tools real developers use. Build fast, responsive sites and apps with latest web technologies.",
+                image: "/bento/webdev.svg",
+                glow: "top-[-55%] left-[-50%]",
+                borderGradient: "bg-[linear-gradient(135deg,rgba(0,0,0,0.06)_0%,rgb(34,34,34)_70%,#848484b9_98%)]"
+            },
+            {
+                title: "Competitive Programming",
+                description: "Enhances coding skills through hands-on problems building sharper logic and stronger problem-solving ability.",
+                glow: "top-[-60%] right-[-80%]",
+                borderGradient: "bg-[linear-gradient(225deg,rgba(0,0,0,0.06)_0%,rgb(34,34,34)_70%,#848484b9_98%)]"
+            }
+        ],
+        [
+            {
+                title: "Machine Learning",
+                description: "Dive into the world of intelligent systems with hands-on projects and see how machines learn from experience.",
+                glow: "bottom-[-60%] left-[-90%]",
+                borderGradient: "bg-[linear-gradient(45deg,rgba(0,0,0,0.06)_0%,rgb(34,34,34)_70%,#848484b9_98%)]"
+            },
+            {
+                title: "Blockchain",
+                description: "Discover how blockchain powers cryptocurrencies, decentralized apps, and smart contracts. Emphasizes its role in creating trust and security across online networks.",
+                image: "/bento/blockchain.svg",
+                glow: "bottom-[-55%] right-[-50%]",
+                borderGradient: "bg-[linear-gradient(315deg,rgba(0,0,0,0.06)_0%,rgb(34,34,34)_70%,#848484b9_98%)]"
+            }
+        ]
+    ],
+    nontech: [
+        [
+            {
+                title: "Content Writing",
+                description: "Craft engaging stories and blogs that connect ideas with people.",
+                glow: "top-[-60%] left-[-80%]",
+                borderGradient: "bg-[linear-gradient(135deg,rgba(0,0,0,0.06)_0%,rgb(34,34,34)_70%,#848484b9_98%)]"
+            },
+            {
+                title: "Event Management",
+                description: "Plan, organize, and execute exciting campus and tech events.",
+                image: "/bento/events.svg",
+                glow: "top-[-55%] right-[-50%]",
+                borderGradient: "bg-[linear-gradient(225deg,rgba(0,0,0,0.06)_0%,rgb(34,34,34)_70%,#848484b9_98%)]"
+            }
+        ],
+        [
+            {
+                title: "Graphic Designing",
+                description: "Explore creativity with UI/UX and graphic design experiences.",
+                image: "/bento/graphics.svg",
+                glow: "bottom-[-55%] left-[-50%]",
+                borderGradient: "bg-[linear-gradient(45deg,rgba(0,0,0,0.06)_0%,rgb(34,34,34)_70%,#848484b9_98%)]"
+            },
+            {
+                title: "PR & Marketing",
+                description: "Promote events, engage audiences, and build strong community presence.",
+                glow: "bottom-[-60%] right-[-100%]",
+                borderGradient: "bg-[linear-gradient(315deg,rgba(0,0,0,0.06)_0%,rgb(34,34,34)_70%,#848484b9_98%)]"
+            }
+        ]
+    ]
+};
+
+// Reusable BentoCard component
+const BentoCard = ({ title, description, image, isLarge, glow, borderGradient }) => (
+    <div className={`m-auto flex gap-1 justify-center items-center relative p-[1px] rounded-[24px] w-full ${isLarge ? 'md:flex-[1.625]' : 'md:flex-1'}`}>
+        <div className={`absolute left-0 right-0 top-0 bottom-0 z-1 rounded-[24px] ${borderGradient}`}></div>
+        <div className="absolute left-[0.3px] right-[0.3px] top-[0.3px] bottom-[0.3px] z-2 rounded-[24px] m-[1.2px] bg-black"></div>
     <div
-        className="bg-[#060010] border border-[#392e4e] rounded-[20px] text-white flex flex-col justify-center items-center font-light overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(0,0,0,0.15)] md:w-auto w-full min-h-[180px] md:min-h-0"
-        style={{ width, height: '260px' }}
+        className={`bg-[rgba(0,0,0,0.06)] rounded-[24px] z-3 text-white flex flex-col justify-start items-start overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-0.5 shadow-[28px_55px_35px_0_rgba(0,0,0,0.10),_80px_155px_50px_0_rgba(0,0,0,0.04),_0_5px_5px_0_rgba(0,0,0,0.25)] backdrop-blur-[14px] w-full h-[260px] relative ${isLarge ? 'md:flex-[1.625]' : 'md:flex-1'}`}
     >
-        {children}
+        <div className={`flex flex-col justify-start gap-3 h-full w-full p-7 z-10 ${image ? 'relative' : ''}`}>
+            <h3 className={`${montserrat.className} text-start text-3xl font-semibold z-10 ${image ? 'relative' : ''}`}>
+                {title}
+            </h3>
+            <p className={`text-sm text-start opacity-90 mt-3 ${image ? 'max-w-[380px] relative z-10' : ''}`}>
+                {description}
+            </p>
+            {image && (
+                <Image 
+                    src={image} 
+                    alt={`${title} background`} 
+                    className='absolute top-0 right-0 opacity-60 pointer-events-none z-10' 
+                    width={250} 
+                    height={270} 
+                />
+            )}
+            <div className={`absolute ${glow} w-155 h-70 blur-[150px] bg-[rgba(68,164,161,0.60)] z-5`} />
+        </div>
     </div>
+    </div>
+    
 );
 
 const Bento = ({ activeTab }) => {
+    const rows = bentoData[activeTab] || [];
+
     return (
         <div className="w-full flex justify-center px-4 select-none">
-            <div className="max-w-[54rem] w-full flex flex-col gap-4">
-                
-                {activeTab === "tech" && (
-                    <>
-                        {/* Row 1 */}
-                        <div className="flex justify-center gap-4 md:flex-row flex-col md:w-auto w-[90%] mx-auto">
-                            <BentoCard width="650px">
-                                    <div className="flex flex-col justify-start h-full p-2">
-                                        <h3 className={`${montserrat.className} text-start m-5 text-3xl font-semibold`}>
-                                            Web Development
-                                        </h3>
-                                        <p className="text-sm text-start m-5 opacity-80 mt-2">
-                                            Build and design interactive websites and web apps using modern technologies like React, Next.js, and Tailwind CSS.
-                                        </p>
-                                    </div>
-                                </BentoCard>
-
-                                <BentoCard width="400px">
-                                    <div className="flex flex-col justify-start h-full p-2">
-                                        <h3 className={`${montserrat.className} text-start m-5 text-3xl font-semibold`}>
-                                            Competitive Programming
-                                        </h3>
-                                        <p className="text-sm text-start m-5 opacity-80 mt-2">
-                                            Solve coding challenges, boost problem-solving skills, and prepare for global tech contests.
-                                        </p>
-                                    </div>
-                                </BentoCard>
-                            </div>
-
-                            {/* Row 2 */}
-                        <div className="flex justify-center gap-4 md:flex-row flex-col md:w-auto w-[90%] mx-auto">
-                            <BentoCard width="400px">
-                                    <div className="flex flex-col justify-start h-full p-2">
-                                        <h3 className={`${montserrat.className} text-start m-5 text-3xl font-semibold`}>
-                                            Machine Learning
-                                        </h3>
-                                        <p className="text-sm text-start m-5 opacity-80 mt-2">
-                                            Explore real-world AI with hands-on projects using Python, TensorFlow, and data-driven insights.
-                                        </p>
-                                    </div>
-                                </BentoCard>
-
-                                <BentoCard width="650px">
-                                    <div className="flex flex-col justify-start h-full p-2">
-                                        <h3 className={`${montserrat.className} text-start m-5 text-3xl font-semibold`}>
-                                            Blockchain
-                                        </h3>
-                                        <p className="text-sm text-start m-5 opacity-80 mt-2">
-                                            Learn the technology behind cryptocurrencies, decentralized apps, and smart contracts.
-                                        </p>
-                                    </div>
-                                </BentoCard>
-                            </div>
-                        </>
-                    )}
-
-                    {activeTab === "nontech" && (
-                    <>
-                        {/* Row 1 */}
-                        <div className="flex justify-center gap-4 md:flex-row flex-col md:w-auto w-[90%] mx-auto">
-                            <BentoCard width="400px">
-                                    <div className="flex flex-col justify-start h-full p-2">
-                                        <h3 className={`${montserrat.className} text-start m-5 text-3xl font-semibold`}>
-                                            Content Writing
-                                        </h3>
-                                        <p className="text-sm text-start m-5 opacity-80 mt-2">
-                                            Craft engaging stories and blogs that connect ideas with people.
-                                        </p>
-                                    </div>
-                                </BentoCard>
-
-                                <BentoCard width="650px">
-                                    <div className="flex flex-col justify-start h-full p-2">
-                                        <h3 className={`${montserrat.className} text-start m-5 text-3xl font-semibold`}>
-                                            Event Management
-                                        </h3>
-                                        <p className="text-sm text-start m-5 opacity-80 mt-2">
-                                            Plan, organize, and execute exciting campus and tech events.
-                                        </p>
-                                    </div>
-                                </BentoCard>
-                            </div>
-
-                            {/* Row 2 */}
-                        <div className="flex justify-center gap-4 md:flex-row flex-col md:w-auto w-[90%] mx-auto">
-                            <BentoCard width="650px">
-                                    <div className="flex flex-col justify-start h-full p-2">
-                                        <h3 className={`${montserrat.className} text-start m-5 text-3xl font-semibold`}>
-                                            Graphic Designing
-                                        </h3>
-                                        <p className="text-sm text-start m-5 opacity-80 mt-2">
-                                            Explore creativity with UI/UX and graphic design experiences.
-                                        </p>
-                                    </div>
-                                </BentoCard>
-
-                                <BentoCard width="400px">
-                                    <div className="flex flex-col justify-start h-full p-2">
-                                        <h3 className={`${montserrat.className} text-start m-5 text-3xl font-semibold`}>
-                                            PR & Marketing
-                                        </h3>
-                                        <p className="text-sm text-start m-5 opacity-80 mt-2">
-                                            Promote events, engage audiences, and build strong community presence.
-                                        </p>
-                                    </div>
-                                </BentoCard>
-                            </div>
-                        </>
-                )}
-
+            <div className="w-full max-w-[1050px] flex flex-col gap-4">
+                {rows.map((row, rowIndex) => (
+                    <div 
+                        key={rowIndex}
+                        className="flex justify-center gap-4 md:flex-row flex-col w-full"
+                    >
+                        {row.map((card, cardIndex) => (
+                            <BentoCard 
+                                key={cardIndex}
+                                title={card.title}
+                                description={card.description}
+                                image={card.image}
+                                isLarge={card.image !== undefined}
+                                glow={card.glow}
+                                borderGradient={card.borderGradient}
+                            />
+                        ))}
+                    </div>
+                ))}
             </div>
         </div>
     );
