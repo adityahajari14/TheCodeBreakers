@@ -1,26 +1,15 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import TeamCard from "@/components/TeamCard";
-
-const makeMembers = (baseName, count = 8) =>
-  Array.from({ length: count }).map((_, i) => ({
-    member_name: `${baseName} ${i + 1}`,
-    position: i % 2 === 0 ? "Engineer" : "Designer",
-    image: "/billa.jpg",
-    accounts: [
-      { name: "GitHub", url: "#", logo: "/github.svg" },
-      { name: "LinkedIn", url: "#", logo: "/linkedin.svg" },
-      // { name: "Instagram", url: "#", logo: "/instagram.svg" },
-    ],
-  }));
+import data from "@/data/teamData.json";
 
 export default function AboutPage() {
   const rows = [
-    { title: "Core Team", members: makeMembers("Core", 8) },
-    { title: "Tech Team", members: makeMembers("Tech", 8) },
+    { title: "Core Team", members: data.coreTeam },
+    { title: "Tech Team", members: data.techTeam },
     {
       title: "Graphics, Publicity & Socials Team",
-      members: makeMembers("Socials", 8),
+      members: data.socialsTeam,
     },
   ];
 

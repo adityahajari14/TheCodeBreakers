@@ -1,0 +1,35 @@
+{
+  "achievements": [
+    { "id": 1, "imageUrl": "https://picsum.photos/seed/person1/300" },
+    { "id": 2, "imageUrl": "https://picsum.photos/seed/person2/300" },
+    { "id": 3, "imageUrl": "https://picsum.photos/seed/person3/300" },
+    { "id": 4, "imageUrl": "https://picsum.photos/seed/person4/300" },
+    { "id": 5, "imageUrl": "https://picsum.photos/seed/person5/300" },
+    { "id": 6, "imageUrl": "https://picsum.photos/seed/person6/300" },
+    { "id": 7, "imageUrl": "https://picsum.photos/seed/person7/300" },
+    { "id": 8, "imageUrl": "https://picsum.photos/seed/person8/300" },
+    { "id": 9, "imageUrl": "https://picsum.photos/seed/person9/300" },
+    { "id": 10, "imageUrl": "https://picsum.photos/seed/person10/300" },
+    { "id": 11, "imageUrl": "https://picsum.photos/seed/person11/300" },
+    { "id": 12, "imageUrl": "https://picsum.photos/seed/person12/300" },
+    { "id": 13, "imageUrl": "https://picsum.photos/seed/person13/300" }
+  ],
+  "placements": [
+    { "id": 1, "name": "Lara Jean", "role": "Product designer who focuses on simplicity and usability", "company": "Accenture - 12 LPA", "imageUrl": "https://picsum.photos/seed/lara1/300", "githubUrl": "", "linkedinUrl": "" },
+    { "id": 2, "name": "Lara Jean", "role": "Product designer who focuses on simplicity and usability", "company": "Accenture - 12 LPA", "imageUrl": "https://picsum.photos/seed/lara2/300", "githubUrl": "", "linkedinUrl": "" },
+    { "id": 3, "name": "Lara Jean", "role": "Product designer who focuses on simplicity and usability", "company": "Accenture - 12 LPA", "imageUrl": "https://picsum.photos/seed/lara3/300", "githubUrl": "", "linkedinUrl": "" },
+    { "id": 4, "name": "Lara Jean", "role": "Product designer who focuses on simplicity and usability", "company": "Accenture - 12 LPA", "imageUrl": "https://picsum.photos/seed/lara4/300", "githubUrl": "", "linkedinUrl": "" },
+    { "id": 5, "name": "Lara Jean", "role": "Product designer who focuses on simplicity and usability", "company": "Accenture - 12 LPA", "imageUrl": "https://picsum.photos/seed/lara5/300", "githubUrl": "", "linkedinUrl": "" },
+    { "id": 6, "name": "Lara Jean", "role": "Product designer who focuses on simplicity and usability", "company": "Accenture - 12 LPA", "imageUrl": "https://picsum.photos/seed/lara6/300", "githubUrl": "", "linkedinUrl": "" }
+  ],
+  "hackathons": [
+    { "id": 1, "name": "Lara Jean", "role": "Product designer who focuses on simplicity and usability", "company": "Intern @Google", "imageUrl": "https://picsum.photos/seed/lara1/300", "githubUrl": "", "linkedinUrl": "", "achievements": ["100x Engineers Buildathon: Qualified for Semi Finals", "Hack for BioHeritage: Winner"] },
+    { "id": 2, "name": "Lara Jean", "role": "Product designer who focuses on simplicity and usability", "company": "Intern @Google", "imageUrl": "https://picsum.photos/seed/lara2/300", "githubUrl": "", "linkedinUrl": "", "achievements": ["100x Engineers Buildathon: Qualified for Semi Finals", "Hack for BioHeritage: Winner"] },
+    { "id": 3, "name": "Lara Jean", "role": "Product designer who focuses on simplicity and usability", "company": "Intern @Google", "imageUrl": "https://picsum.photos/seed/lara3/300", "githubUrl": "", "linkedinUrl": "", "achievements": ["100x Engineers Buildathon: Qualified for Semi Finals", "Hack for BioHeritage: Winner"] },
+    { "id": 4, "name": "Lara Jean", "role": "Product designer who focuses on simplicity and usability", "company": "Intern @Google", "imageUrl": "https://picsum.photos/seed/lara4/300", "githubUrl": "", "linkedinUrl": "", "achievements": ["100x Engineers Buildathon: Qualified for Semi Finals", "Hack for BioHeritage: Winner"] },
+    { "id": 5, "name": "Lara Jean", "role": "Product designer who focuses on simplicity and usability", "company": "Intern @Google", "imageUrl": "https://picsum.photos/seed/lara5/300", "githubUrl": "", "linkedinUrl": "", "achievements": ["100x Engineers Buildathon: Qualified for Semi Finals", "Hack for BioHeritage: Winner"] },
+    { "id": 6, "name": "Lara Jean", "role": "Product designer who focuses on simplicity and usability", "company": "Intern @Google", "imageUrl": "https://picsum.photos/seed/lara6/300", "githubUrl": "", "linkedinUrl": "", "achievements": ["100x Engineers Buildathon: Qualified for Semi Finals", "Hack for BioHeritage: Winner"] },
+    { "id": 7, "name": "Lara Jean", "role": "Product designer who focuses on simplicity and usability", "company": "Intern @Google", "imageUrl": "https://picsum.photos/seed/lara7/300", "githubUrl": "", "linkedinUrl": "", "achievements": ["100x Engineers Buildathon: Qualified for Semi Finals", "Hack for BioHeritage: Winner"] },
+    { "id": 8, "name": "Lara Jean", "role": "Product designer who focuses on simplicity and usability", "company": "Intern @Google", "imageUrl": "https://picsum.photos/seed/lara8/300", "githubUrl": "", "linkedinUrl": "", "achievements": ["100x Engineers Buildathon: Qualified for Semi Finals", "Hack for BioHeritage: Winner"] }
+  ]
+}

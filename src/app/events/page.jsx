@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { useRef, useState } from 'react';
+import data from "@/data/eventsData.json";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -12,32 +13,7 @@ export default function EventsPage() {
   const eventsSectionRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const eventsData = [
-    {
-      eventName: "Code Construct",
-      eventDate: "September 2025",
-      imageUrl: "./IMG_6635.jpg",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit.ss"
-    },
-    {
-      eventName: "Code Construct",
-      eventDate: "September 2025",
-      imageUrl: "./IMG_6635.jpg",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit.ss"
-    },
-    {
-      eventName: "Code Construct",
-      eventDate: "September 2025",
-      imageUrl: "./IMG_6635.jpg",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit.ss"
-    },
-    {
-      eventName: "Code Construct",
-      eventDate: "September 2025",
-      imageUrl: "./IMG_6635.jpg",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit.ss"
-    }
-  ];
+  const eventsData = data.events;
 
   useGSAP(() => {
     const mm = gsap.matchMedia();
