@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -38,7 +38,7 @@ export default function Carousel() {
   useEffect(() => {
     timeoutRef.current = setTimeout(nextSlide, 3000);
     return () => clearTimeout(timeoutRef.current);
-  }, [currentIndex]);
+  }, [currentIndex, nextSlide]);
 
   const getPositionStyle = (index) => {
     const diff = (index - currentIndex + length) % length;

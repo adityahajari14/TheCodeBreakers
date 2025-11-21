@@ -192,7 +192,7 @@ export default function HomePage() {
                 <p
                     className={`font-['Montserrat'] lg:text-xl max-lg:text-sm lg:w-[700px] max-lg:max-w-full mx-auto font-bold bg-clip-text text-transparent bg-[linear-gradient(180deg,_#FFF_0%,_#999_90%)]`}
                 >
-                    A vibrant space for every passion—whether you're a coder, designer,
+                    A vibrant space for every passion—whether you&apos;re a coder, designer,
                     writer, or event wizard.
                 </p>
 
