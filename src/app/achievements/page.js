@@ -12,8 +12,7 @@ const hackathonsData = data.hackathons
 const AchievementCard = ({ imageUrl, gridClass }) => {
   return(
     <div className={`${gridClass} relative w-full h-full`}>
-      <div className="absolute inset-0 bg-[#0C0C0C] rounded-[20px] transition-transform duration-300 ease z-[2]"></div>
-      <div className="absolute top-[10px] left-[-10px] w-[calc(100%-10px)] h-[calc(100%-10px)] rounded-[20px] overflow-hidden z-[5]">
+      <div className="absolute top-[0px] left-[0px] w-[calc(100%-10px)] h-[calc(100%-10px)] rounded-[20px] overflow-hidden z-[5]">
         <Image src={imageUrl} alt="Achievement" fill className="object-cover block" />
       </div>
     </div>
@@ -23,7 +22,7 @@ const AchievementCard = ({ imageUrl, gridClass }) => {
 const PlacementCard = ({ data }) => {
   return(
     <div className="m-auto flex gap-1 justify-center items-center relative p  -1 rounded-[2.5rem] w-fit font-['Montserrat']">
-      <div className="absolute left-0 right-0 top-0 bottom-0 z-1 rounded-[2.5rem] placementCardBorder"></div>
+      <div className="absolute left-0 right-0 top-0 bottom-0 z-1 rounded-[2.5rem] cardBorder"></div>
       <div className="absolute left-[0.3px] right-[0.3px] top-[0.3px] bottom-[0.3px] z-2 rounded-[2.5rem] m-[1.2px] bg-black"></div>
       <div className="absolute left-[0.3px] right-[0.3px] top-[0.3px] bottom-[0.3px] z-3 rounded-[2.5rem] m-[1.2px] overflow-hidden bg-[rgba(0,0,0,0.06)] shadow-[0_4px_4px_0_rgba(0,0,0,0.25),_61px_121px_38px_0_rgba(0,0,0,0.04),_22px_43px_29px_0_rgba(0,0,0,0.10)]">
           <div className="absolute -translate-x-[40%] -bottom-10 w-60 h-25 bg-[rgba(52,148,145,0.70)] blur-[100px] z-3" />
@@ -62,8 +61,8 @@ const PlacementCard = ({ data }) => {
 
 const HackathonCard = ({ data, onViewMore }) => {
   return(
-    <div className="m-auto flex gap-1 justify-center items-center relative p  -1 rounded-[2.5rem] w-fit font-['Montserrat']">
-      <div className="absolute left-0 right-0 top-0 bottom-0 z-1 rounded-[2.5rem] placementCardBorder"></div>
+     <div className="m-auto flex gap-1 justify-center items-center relative p  -1 rounded-[2.5rem] w-fit font-['Montserrat']">
+      <div className="absolute left-0 right-0 top-0 bottom-0 z-1 rounded-[2.5rem] cardBorder"></div>
       <div className="absolute left-[0.3px] right-[0.3px] top-[0.3px] bottom-[0.3px] z-2 rounded-[2.5rem] m-[1.2px] bg-black"></div>
       <div className="absolute left-[0.3px] right-[0.3px] top-[0.3px] bottom-[0.3px] z-3 rounded-[2.5rem] m-[1.2px] overflow-hidden bg-[rgba(0,0,0,0.06)] shadow-[0_4px_4px_0_rgba(0,0,0,0.25),_61px_121px_38px_0_rgba(0,0,0,0.04),_22px_43px_29px_0_rgba(0,0,0,0.10)]">
           <div className="absolute -translate-x-[40%] -bottom-10 w-60 h-25 bg-[rgba(52,148,145,0.70)] blur-[100px] z-3" />
@@ -141,8 +140,8 @@ const AchievementsPage = () => {
             <AchievementCard imageUrl={achievementsData[12].imageUrl} gridClass="col-start-9 col-span-1 row-start-6 row-span-3" />
 
             <div className="col-start-4 col-span-3 row-start-6 row-span-2 text-white text-center flex flex-col justify-center items-center z-[10] pointer-events-none">
-              <h1 className={`font-['oxanium'] m-0 leading-[1.2] text-[3.2rem] font-bold whitespace-nowrap`}>Achievements & Success Stories</h1>
-              <p className={`font-['montserrat'] text-[1.2rem] opacity-80 max-w-[300px] mt-[15px] mr-[242px] whitespace-nowrap font-extrabold text-white`}>
+              <h1 className={`font-['oxanium'] m-0 leading-[1.2] text-[3.2rem] font-bold whitespace-nowrap bg-clip-text text-transparent bg-[linear-gradient(180deg,#FFF_0%,#999_100%)]`}>Achievements & Success Stories</h1>
+              <p className={`font-['montserrat'] text-[1.2rem] opacity-80 text-center justify-center items-center whitespace-nowrap font-extrabold bg-clip-text text-transparent bg-[linear-gradient(180deg,#FFF_0%,#999_100%)]`}>
                 Celebrating the wins of TheCodeBreakers community.
               </p>
             </div>
@@ -202,7 +201,7 @@ const AchievementsPage = () => {
               <div className="absolute translate-x-[30%] -top-10 right-0 w-60 h-25 bg-[rgba(52,148,145,0.70)] blur-[100px] z-3" />
             </div>
             <div className="relative z-4 rounded-[2.5rem] p-4 xs:p-5 sm:p-6 flex flex-col sm:flex-row gap-4 xs:gap-5 sm:gap-6">
-              <div className="w-full sm:w-56 md:w-64 aspect-square rounded-[2rem] overflow-hidden flex-shrink-0 mx-auto sm:mx-0 relative border border-[rgba(255,255,255,0.5)] backdrop-blur-[7.5px]">
+              <div className="w-full sm:w-56 md:w-64 aspect-square rounded-[2rem] overflow-hidden flex-shrink-0 mx-auto sm:mx-0 relative backdrop-blur-[7.5px]">
                 <Image src={selectedCard.imageUrl} alt={selectedCard.name} fill className="object-cover" />
               </div>
               <div className="flex flex-col flex-1 min-h-0 text-white">

@@ -66,11 +66,11 @@ export default function EventsPage() {
 
   return (
     <div style={{ position: "relative" }}>
-      <section ref={eventsSectionRef} className="eventsection w-full overflow-hidden flex-col justify-center items-center pt-[5vh] pb-[16vh]">
-        <h2 className="pb-20 text-center justify-start text-5xl font-bold font-['Oxanium'] text-transparent !bg-clip-text [background:linear-gradient(rgba(0,_0,_0,_0.2),_rgba(0,_0,_0,_0.2)),_linear-gradient(180deg,_#fff,_#999)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">
+      <section ref={eventsSectionRef} className="eventsection w-full overflow-hidden flex-col justify-center items-center lg:pt-[20vh] max-lg:pt-[15vh] lg:pb-[16vh] max-lg:pb-[12vh] max-lg:px-4">
+        <h2 className="lg:pb-20 max-lg:pb-12 text-center justify-start lg:text-5xl max-lg:text-3xl font-bold font-['Oxanium'] text-transparent !bg-clip-text [background:linear-gradient(rgba(0,_0,_0,_0.2),_rgba(0,_0,_0,_0.2)),_linear-gradient(180deg,_#fff,_#999)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent]">
           Events at TCB
         </h2>
-        <div ref={eventsContainerRef} className="events w-full flex flex-row justify-flex-start items-center pl-[170px] pr-[100px]">
+        <div ref={eventsContainerRef} className="events w-full flex flex-row justify-flex-start items-center lg:pl-[170px] max-lg:pl-4 lg:pr-[100px] max-lg:pr-4">
           {eventsData.map((event, index) => (
             <EventsDiv
               key={index}

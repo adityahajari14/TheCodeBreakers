@@ -76,29 +76,29 @@ const bentoData = {
 
 // Reusable BentoCard component
 const BentoCard = ({ title, description, image, isLarge, glow, borderGradient }) => (
-    <div className={`m-auto flex gap-1 justify-center items-center relative p-[1px] rounded-[24px] w-full ${isLarge ? 'md:flex-[1.625]' : 'md:flex-1'}`}>
-        <div className={`absolute left-0 right-0 top-0 bottom-0 z-1 rounded-[24px] ${borderGradient}`}></div>
-        <div className="absolute left-[0.3px] right-[0.3px] top-[0.3px] bottom-[0.3px] z-2 rounded-[24px] m-[1.2px] bg-black"></div>
+    <div className={`m-auto flex gap-1 justify-center items-center relative p-[1px] rounded-[20px] sm:rounded-[24px] w-full ${isLarge ? 'md:flex-[1.625]' : 'md:flex-1'}`}>
+        <div className={`absolute left-0 right-0 top-0 bottom-0 z-1 rounded-[20px] sm:rounded-[24px] ${borderGradient}`}></div>
+        <div className="absolute left-[0.3px] right-[0.3px] top-[0.3px] bottom-[0.3px] z-2 rounded-[20px] sm:rounded-[24px] m-[1.2px] bg-black"></div>
     <div
-        className={`bg-[rgba(0,0,0,0.06)] rounded-[24px] z-3 text-white flex flex-col justify-start items-start overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-0.5 shadow-[28px_55px_35px_0_rgba(0,0,0,0.10),_80px_155px_50px_0_rgba(0,0,0,0.04),_0_5px_5px_0_rgba(0,0,0,0.25)] backdrop-blur-[14px] w-full h-[260px] relative ${isLarge ? 'md:flex-[1.625]' : 'md:flex-1'}`}
+        className={`bg-[rgba(0,0,0,0.06)] rounded-[20px] sm:rounded-[24px] z-3 text-white flex flex-col justify-start items-start overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-0.5 shadow-[28px_55px_35px_0_rgba(0,0,0,0.10),_80px_155px_50px_0_rgba(0,0,0,0.04),_0_5px_5px_0_rgba(0,0,0,0.25)] backdrop-blur-[14px] w-full min-h-[200px] h-[200px] sm:h-[220px] md:h-[240px] lg:h-[260px] relative ${isLarge ? 'md:flex-[1.625]' : 'md:flex-1'}`}
     >
-        <div className={`flex flex-col justify-start gap-3 h-full w-full p-7 z-10 ${image ? 'relative' : ''}`}>
-            <h3 className={`${montserrat.className} text-start text-3xl font-semibold z-10 ${image ? 'relative' : ''}`}>
+        <div className={`flex flex-col justify-start gap-2 sm:gap-3 h-full w-full p-5 sm:p-6 lg:p-7 z-10 ${image ? 'relative' : ''}`}>
+            <h3 className={`${montserrat.className} text-start text-xl sm:text-2xl lg:text-3xl font-semibold z-10 leading-tight ${image ? 'relative' : ''}`}>
                 {title}
             </h3>
-            <p className={`text-sm text-start opacity-90 mt-3 ${image ? 'max-w-[380px] relative z-10' : ''}`}>
+            <p className={`text-xs sm:text-sm leading-relaxed text-start opacity-90 mt-1 sm:mt-2 lg:mt-3 ${image ? 'max-w-[280px] sm:max-w-[320px] lg:max-w-[380px] relative z-10' : ''}`}>
                 {description}
             </p>
             {image && (
                 <Image 
                     src={image} 
                     alt={`${title} background`} 
-                    className='absolute top-0 right-0 opacity-60 pointer-events-none z-10' 
+                    className='absolute top-0 right-0 opacity-60 pointer-events-none z-10 w-32 h-auto sm:w-44 md:w-56 lg:w-[250px]' 
                     width={250} 
                     height={270} 
                 />
             )}
-            <div className={`absolute ${glow} w-155 h-70 blur-[150px] bg-[rgba(68,164,161,0.60)] z-5`} />
+            <div className={`absolute ${glow} w-120 sm:w-140 lg:w-155 h-50 sm:h-60 lg:h-70 blur-[120px] sm:blur-[140px] lg:blur-[150px] bg-[rgba(68,164,161,0.60)] z-5`} />
         </div>
     </div>
     </div>
@@ -109,12 +109,12 @@ const Bento = ({ activeTab }) => {
     const rows = bentoData[activeTab] || [];
 
     return (
-        <div className="w-full flex justify-center px-4 select-none">
-            <div className="w-full max-w-[1050px] flex flex-col gap-4">
+        <div className="w-full flex justify-center px-4 sm:px-6 lg:px-8 select-none">
+            <div className="w-full max-w-[1050px] flex flex-col gap-3 sm:gap-4">
                 {rows.map((row, rowIndex) => (
                     <div 
                         key={rowIndex}
-                        className="flex justify-center gap-4 md:flex-row flex-col w-full"
+                        className="flex justify-center gap-3 sm:gap-4 md:flex-row flex-col w-full"
                     >
                         {row.map((card, cardIndex) => (
                             <BentoCard 

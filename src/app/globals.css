@@ -60,6 +60,6 @@ h6 {
 .divBorder{
   background: linear-gradient(50deg, #848484b9 2%, rgb(34,34,34) 12.22%, rgb(34,34,34) 82%, #848484b9 98%);
 }
-.placementCardBorder{
-  background: linear-gradient(50deg, #848484b9 2%, rgb(34,34,34) 12.22%, rgb(34,34,34) 82%, #848484b9 98%);
+.cardBorder{
+  background: linear-gradient(2300deg, #8484847c 2%, rgb(34,34,34) 12.22%, rgb(34,34,34) 82%, #84848466 98%);
 }

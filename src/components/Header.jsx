@@ -15,7 +15,7 @@ const Header = () => {
   };
 
   return(
-    <header className="fixed top-0 w-full z-50 flex justify-center items-center font-['Montserrat'] font-medium">
+    <header className="fixed top-0 w-full z-50 flex justify-center items-center font-['Montserrat'] font-medium max-lg:px-2">
       <GlassSurface 
         width={null} 
         height={null} 
@@ -27,15 +27,15 @@ const Header = () => {
         distortionScale={30} 
         backgroundOpacity={0.7}
         additionalClasses="flex-col lg:flex-row"
-        className="w-[80vw] sm:w-[80vw] lg:w-[60vw] h-auto min-h-[9vh] mx-[1rem] sm:mx-[2rem] my-[1.5rem] sm:my-[3rem] relative flex flex-col lg:flex-row justify-center items-center py-3 lg:py-0"
+        className="lg:w-[60vw] max-lg:w-[95vw] h-auto min-h-[64px] lg:min-h-[9vh] max-lg:mx-2 lg:my-6 max-lg:my-3 relative flex flex-col lg:flex-row justify-center items-center py-3 lg:py-0"
       >
-        <div className="w-full flex flex-row justify-between items-center px-4 lg:px-4">
+        <div className="w-full flex flex-row justify-between items-center lg:px-6 max-lg:px-4">
           <Link href="/">
-            <img src="./tcb.webp" alt="TCB Logo" className="w-8 sm:w-10 aspect-square" />
+            <img src="./tcb.webp" alt="TCB Logo" className="lg:w-12 lg:h-12 max-lg:w-10 max-lg:h-10 aspect-square" />
           </Link>
           
           <nav className="hidden lg:block">
-            <ul className="flex flex-row justify-between items-center gap-x-[2rem] text-white font-medium">
+            <ul className="flex flex-row justify-between items-center gap-x-6 xl:gap-x-8 text-white font-medium text-sm xl:text-base">
               <li>
                 <Link 
                   href={"/"} 
@@ -76,9 +76,10 @@ const Header = () => {
           </div>
 
           <button 
-            className="lg:hidden text-white focus:outline-none z-50 transition-transform duration-300"
+            className="lg:hidden text-white focus:outline-none z-50 transition-transform duration-300 p-2 touch-manipulation min-h-[44px] min-w-[44px] flex items-center justify-center"
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
+            aria-expanded={isMobileMenuOpen}
           >
             <svg 
               className="w-6 h-6 transition-transform duration-300" 
@@ -105,31 +106,31 @@ const Header = () => {
               : 'max-h-0 opacity-0 pb-0 pt-0'
           }`}
         >
-          <nav className="flex flex-col space-y-5 justify-center items-center">
+          <nav className="flex flex-col space-y-4 justify-center items-center">
             <Link 
               href={"/"} 
-              className={`text-white py-2 px-4 transition-all duration-200 relative ${pathname === "/" ? "after:content-[''] after:absolute after:bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-[40%] after:h-[1px] after:bg-white" : "after:content-[''] after:absolute after:bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-0 hover:after:w-[40%] after:h-[1px] after:bg-white/50 after:transition-all after:duration-300"}`}
+              className={`text-white py-3 px-6 transition-all duration-200 relative touch-manipulation min-h-[48px] flex items-center ${pathname === "/" ? "after:content-[''] after:absolute after:bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-[40%] after:h-[1px] after:bg-white" : "after:content-[''] after:absolute after:bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-0 hover:after:w-[40%] after:h-[1px] after:bg-white/50 after:transition-all after:duration-300"}`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Home
             </Link>
             <Link 
               href={"/about"} 
-              className={`text-white py-2 px-4 transition-all duration-200 relative ${pathname === "/about" ? "after:content-[''] after:absolute after:bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-[40%] after:h-[1px] after:bg-white" : "after:content-[''] after:absolute after:bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-0 hover:after:w-[40%] after:h-[1px] after:bg-white/50 after:transition-all after:duration-300"}`}
+              className={`text-white py-3 px-6 transition-all duration-200 relative touch-manipulation min-h-[48px] flex items-center ${pathname === "/about" ? "after:content-[''] after:absolute after:bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-[40%] after:h-[1px] after:bg-white" : "after:content-[''] after:absolute after:bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-0 hover:after:w-[40%] after:h-[1px] after:bg-white/50 after:transition-all after:duration-300"}`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               About
             </Link>
             <Link 
               href={"/achievements"} 
-              className={`text-white py-2 px-4 transition-all duration-200 relative ${pathname === "/achievements" ? "after:content-[''] after:absolute after:bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-[40%] after:h-[1px] after:bg-white" : "after:content-[''] after:absolute after:bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-0 hover:after:w-[40%] after:h-[1px] after:bg-white/50 after:transition-all after:duration-300"}`}
+              className={`text-white py-3 px-6 transition-all duration-200 relative touch-manipulation min-h-[48px] flex items-center ${pathname === "/achievements" ? "after:content-[''] after:absolute after:bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-[40%] after:h-[1px] after:bg-white" : "after:content-[''] after:absolute after:bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-0 hover:after:w-[40%] after:h-[1px] after:bg-white/50 after:transition-all after:duration-300"}`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Achievements
             </Link>
             <Link 
               href={"/events"} 
-              className={`text-white py-2 px-4 transition-all duration-200 relative ${pathname === "/events" ? "after:content-[''] after:absolute after:bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-[40%] after:h-[1px] after:bg-white" : "after:content-[''] after:absolute after:bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-0 hover:after:w-[40%] after:h-[1px] after:bg-white/50 after:transition-all after:duration-300"}`}
+              className={`text-white py-3 px-6 transition-all duration-200 relative touch-manipulation min-h-[48px] flex items-center ${pathname === "/events" ? "after:content-[''] after:absolute after:bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-[40%] after:h-[1px] after:bg-white" : "after:content-[''] after:absolute after:bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-0 hover:after:w-[40%] after:h-[1px] after:bg-white/50 after:transition-all after:duration-300"}`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Events

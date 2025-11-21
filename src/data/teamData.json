@@ -1,224 +1,112 @@
 {
   "coreTeam": [
     {
-      "member_name": "Core 1",
-      "position": "Engineer",
-      "image": "/billa.jpg",
-      "accounts": [
-        { "name": "GitHub", "url": "#", "logo": "/github.svg" },
-        { "name": "LinkedIn", "url": "#", "logo": "/linkedin.svg" }
-      ]
+      "name": "Billa Chan",
+      "role": "Cuteness Lead",
+      "imageUrl": "/billa.jpg",
+      "githubUrl": "#",
+      "linkedinUrl": "#",
+      "instagramUrl": "#"
     },
     {
-      "member_name": "Core 2",
-      "position": "Designer",
-      "image": "/billa.jpg",
-      "accounts": [
-        { "name": "GitHub", "url": "#", "logo": "/github.svg" },
-        { "name": "LinkedIn", "url": "#", "logo": "/linkedin.svg" }
-      ]
+      "name": "Billa Chan",
+      "role": "Cuteness Lead",
+      "imageUrl": "/billa.jpg",
+      "githubUrl": "#",
+      "linkedinUrl": "#",
+      "instagramUrl": "#"
     },
     {
-      "member_name": "Core 3",
-      "position": "Engineer",
-      "image": "/billa.jpg",
-      "accounts": [
-        { "name": "GitHub", "url": "#", "logo": "/github.svg" },
-        { "name": "LinkedIn", "url": "#", "logo": "/linkedin.svg" }
-      ]
+      "name": "Billa Chan",
+      "role": "Cuteness Lead",
+      "imageUrl": "/billa.jpg",
+      "githubUrl": "#",
+      "linkedinUrl": "#",
+      "instagramUrl": "#"
     },
     {
-      "member_name": "Core 4",
-      "position": "Designer",
-      "image": "/billa.jpg",
-      "accounts": [
-        { "name": "GitHub", "url": "#", "logo": "/github.svg" },
-        { "name": "LinkedIn", "url": "#", "logo": "/linkedin.svg" }
-      ]
+      "name": "Billa Chan",
+      "role": "Cuteness Lead",
+      "imageUrl": "/billa.jpg",
+      "githubUrl": "#",
+      "linkedinUrl": "#",
+      "instagramUrl": "#"
     },
     {
-      "member_name": "Core 5",
-      "position": "Engineer",
-      "image": "/billa.jpg",
-      "accounts": [
-        { "name": "GitHub", "url": "#", "logo": "/github.svg" },
-        { "name": "LinkedIn", "url": "#", "logo": "/linkedin.svg" }
-      ]
-    },
-    {
-      "member_name": "Core 6",
-      "position": "Designer",
-      "image": "/billa.jpg",
-      "accounts": [
-        { "name": "GitHub", "url": "#", "logo": "/github.svg" },
-        { "name": "LinkedIn", "url": "#", "logo": "/linkedin.svg" }
-      ]
-    },
-    {
-      "member_name": "Core 7",
-      "position": "Engineer",
-      "image": "/billa.jpg",
-      "accounts": [
-        { "name": "GitHub", "url": "#", "logo": "/github.svg" },
-        { "name": "LinkedIn", "url": "#", "logo": "/linkedin.svg" }
-      ]
-    },
-    {
-      "member_name": "Core 8",
-      "position": "Designer",
-      "image": "/billa.jpg",
-      "accounts": [
-        { "name": "GitHub", "url": "#", "logo": "/github.svg" },
-        { "name": "LinkedIn", "url": "#", "logo": "/linkedin.svg" }
-      ]
+      "name": "Billa Chan",
+      "role": "Cuteness Lead",
+      "imageUrl": "/billa.jpg",
+      "githubUrl": "#",
+      "linkedinUrl": "#",
+      "instagramUrl": "#"
     }
   ],
   "techTeam": [
     {
-      "member_name": "Tech 1",
-      "position": "Engineer",
-      "image": "/billa.jpg",
-      "accounts": [
-        { "name": "GitHub", "url": "#", "logo": "/github.svg" },
-        { "name": "LinkedIn", "url": "#", "logo": "/linkedin.svg" }
-      ]
+      "name": "Billa Chan",
+      "role": "Cuteness Lead",
+      "imageUrl": "/billa.jpg",
+      "githubUrl": "#",
+      "linkedinUrl": "#",
+      "instagramUrl": "#"
     },
     {
-      "member_name": "Tech 2",
-      "position": "Designer",
-      "image": "/billa.jpg",
-      "accounts": [
-        { "name": "GitHub", "url": "#", "logo": "/github.svg" },
-        { "name": "LinkedIn", "url": "#", "logo": "/linkedin.svg" }
-      ]
+      "name": "Billa Chan",
+      "role": "Cuteness Lead",
+      "imageUrl": "/billa.jpg",
+      "githubUrl": "#",
+      "linkedinUrl": "#",
+      "instagramUrl": "#"
     },
     {
-      "member_name": "Tech 3",
-      "position": "Engineer",
-      "image": "/billa.jpg",
-      "accounts": [
-        { "name": "GitHub", "url": "#", "logo": "/github.svg" },
-        { "name": "LinkedIn", "url": "#", "logo": "/linkedin.svg" }
-      ]
+      "name": "Billa Chan",
+      "role": "Cuteness Lead",
+      "imageUrl": "/billa.jpg",
+      "githubUrl": "#",
+      "linkedinUrl": "#",
+      "instagramUrl": "#"
     },
     {
-      "member_name": "Tech 4",
-      "position": "Designer",
-      "image": "/billa.jpg",
-      "accounts": [
-        { "name": "GitHub", "url": "#", "logo": "/github.svg" },
-        { "name": "LinkedIn", "url": "#", "logo": "/linkedin.svg" }
-      ]
-    },
-    {
-      "member_name": "Tech 5",
-      "position": "Engineer",
-      "image": "/billa.jpg",
-      "accounts": [
-        { "name": "GitHub", "url": "#", "logo": "/github.svg" },
-        { "name": "LinkedIn", "url": "#", "logo": "/linkedin.svg" }
-      ]
-    },
-    {
-      "member_name": "Tech 6",
-      "position": "Designer",
-      "image": "/billa.jpg",
-      "accounts": [
-        { "name": "GitHub", "url": "#", "logo": "/github.svg" },
-        { "name": "LinkedIn", "url": "#", "logo": "/linkedin.svg" }
-      ]
-    },
-    {
-      "member_name": "Tech 7",
-      "position": "Engineer",
-      "image": "/billa.jpg",
-      "accounts": [
-        { "name": "GitHub", "url": "#", "logo": "/github.svg" },
-        { "name": "LinkedIn", "url": "#", "logo": "/linkedin.svg" }
-      ]
-    },
-    {
-      "member_name": "Tech 8",
-      "position": "Designer",
-      "image": "/billa.jpg",
-      "accounts": [
-        { "name": "GitHub", "url": "#", "logo": "/github.svg" },
-        { "name": "LinkedIn", "url": "#", "logo": "/linkedin.svg" }
-      ]
+      "name": "Billa Chan",
+      "role": "Cuteness Lead",
+      "imageUrl": "/billa.jpg",
+      "githubUrl": "#",
+      "linkedinUrl": "#",
+      "instagramUrl": "#"
     }
   ],
   "socialsTeam": [
     {
-      "member_name": "Socials 1",
-      "position": "Engineer",
-      "image": "/billa.jpg",
-      "accounts": [
-        { "name": "GitHub", "url": "#", "logo": "/github.svg" },
-        { "name": "LinkedIn", "url": "#", "logo": "/linkedin.svg" }
-      ]
+      "name": "Billa Chan",
+      "role": "Cuteness Lead",
+      "imageUrl": "/billa.jpg",
+      "githubUrl": "#",
+      "linkedinUrl": "#",
+      "instagramUrl": "#"
     },
     {
-      "member_name": "Socials 2",
-      "position": "Designer",
-      "image": "/billa.jpg",
-      "accounts": [
-        { "name": "GitHub", "url": "#", "logo": "/github.svg" },
-        { "name": "LinkedIn", "url": "#", "logo": "/linkedin.svg" }
-      ]
+      "name": "Billa Chan",
+      "role": "Cuteness Lead",
+      "imageUrl": "/billa.jpg",
+      "githubUrl": "#",
+      "linkedinUrl": "#",
+      "instagramUrl": "#"
     },
     {
-      "member_name": "Socials 3",
-      "position": "Engineer",
-      "image": "/billa.jpg",
-      "accounts": [
-        { "name": "GitHub", "url": "#", "logo": "/github.svg" },
-        { "name": "LinkedIn", "url": "#", "logo": "/linkedin.svg" }
-      ]
+      "name": "Billa Chan",
+      "role": "Cuteness Lead",
+      "imageUrl": "/billa.jpg",
+      "githubUrl": "#",
+      "linkedinUrl": "#",
+      "instagramUrl": "#"
     },
     {
-      "member_name": "Socials 4",
-      "position": "Designer",
-      "image": "/billa.jpg",
-      "accounts": [
-        { "name": "GitHub", "url": "#", "logo": "/github.svg" },
-        { "name": "LinkedIn", "url": "#", "logo": "/linkedin.svg" }
-      ]
-    },
-    {
-      "member_name": "Socials 5",
-      "position": "Engineer",
-      "image": "/billa.jpg",
-      "accounts": [
-        { "name": "GitHub", "url": "#", "logo": "/github.svg" },
-        { "name": "LinkedIn", "url": "#", "logo": "/linkedin.svg" }
-      ]
-    },
-    {
-      "member_name": "Socials 6",
-      "position": "Designer",
-      "image": "/billa.jpg",
-      "accounts": [
-        { "name": "GitHub", "url": "#", "logo": "/github.svg" },
-        { "name": "LinkedIn", "url": "#", "logo": "/linkedin.svg" }
-      ]
-    },
-    {
-      "member_name": "Socials 7",
-      "position": "Engineer",
-      "image": "/billa.jpg",
-      "accounts": [
-        { "name": "GitHub", "url": "#", "logo": "/github.svg" },
-        { "name": "LinkedIn", "url": "#", "logo": "/linkedin.svg" }
-      ]
-    },
-    {
-      "member_name": "Socials 8",
-      "position": "Designer",
-      "image": "/billa.jpg",
-      "accounts": [
-        { "name": "GitHub", "url": "#", "logo": "/github.svg" },
-        { "name": "LinkedIn", "url": "#", "logo": "/linkedin.svg" }
-      ]
+      "name": "Billa Chan",
+      "role": "Cuteness Lead",
+      "imageUrl": "/billa.jpg",
+      "githubUrl": "#",
+      "linkedinUrl": "#",
+      "instagramUrl": "#"
     }
   ]
 }
