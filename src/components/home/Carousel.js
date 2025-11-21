@@ -23,7 +23,7 @@ export default function Carousel() {
   const timeoutRef = useRef(null);
   const length = carouselImages.length;
 
-  const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % length);
+  const nextSlide = useCallback(() => setCurrentIndex((prev) => (prev + 1) % length), [length]);
   // const prevSlide = () => setCurrentIndex((prev) => (prev - 1 + length) % length);
 
   // Detect screen size for responsiveness

@@ -147,7 +147,7 @@ export default function HomePage() {
                         <div className="absolute right-0 translate-x-50 -bottom-40 w-160 h-60 bg-[rgba(68,164,161,0.60)] blur-[150px] z-3 max-lg:hidden" />
                     </div>
                     <div className="mx-auto max-w-6xl lg:rounded-[3rem] max-lg:rounded-[2rem] flex max-md:flex-col md:flex-row items-center lg:p-12 max-lg:p-6 lg:gap-8 max-lg:gap-6 z-4">
-                        <div className="flex-1 flex flex-col items-start">
+                        <div className="flex-1 flex flex-col-reverse items-start md:flex-col">
                             <p
                                 className={`font-['Montserrat'] lg:text-xl max-lg:text-base font-bold mb-6 text-transparent bg-clip-text bg-[linear-gradient(180deg,_#FFF_0%,_#999_95%)]`}
                             >
@@ -167,9 +167,9 @@ export default function HomePage() {
                         </div>
 
                         <div className="flex-1 flex justify-end max-md:justify-center">
-                            <div className="lg:h-74 lg:w-74 max-lg:h-60 max-lg:w-60 rounded-3xl overflow-hidden">
+                            <div className="lg:h-74 lg:w-auto rounded-3xl overflow-hidden">
                                 <Image
-                                    src="/carousel/sample_img.png"
+                                    src="/IMG_6635.jpg"
                                     alt="Who We Are"
                                     width={296}
                                     height={296}

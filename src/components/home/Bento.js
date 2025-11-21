@@ -1,10 +1,4 @@
-import { Montserrat } from "next/font/google";
 import Image from "next/image";
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
 
 // Data object for all bento cards
 const bentoData = {
@@ -83,7 +77,7 @@ const BentoCard = ({ title, description, image, isLarge, glow, borderGradient })
         className={`bg-[rgba(0,0,0,0.06)] rounded-[20px] sm:rounded-[24px] z-3 text-white flex flex-col justify-start items-start overflow-hidden transition-all duration-300 ease-in-out hover:-translate-y-0.5 shadow-[28px_55px_35px_0_rgba(0,0,0,0.10),_80px_155px_50px_0_rgba(0,0,0,0.04),_0_5px_5px_0_rgba(0,0,0,0.25)] backdrop-blur-[14px] w-full min-h-[200px] h-[200px] sm:h-[220px] md:h-[240px] lg:h-[260px] relative ${isLarge ? 'md:flex-[1.625]' : 'md:flex-1'}`}
     >
         <div className={`flex flex-col justify-start gap-2 sm:gap-3 h-full w-full p-5 sm:p-6 lg:p-7 z-10 ${image ? 'relative' : ''}`}>
-            <h3 className={`${montserrat.className} text-start text-xl sm:text-2xl lg:text-3xl font-semibold z-10 leading-tight ${image ? 'relative' : ''}`}>
+            <h3 className={`font-["Montserrat"] text-start text-xl sm:text-2xl lg:text-3xl font-semibold z-10 leading-tight ${image ? 'relative' : ''}`}>
                 {title}
             </h3>
             <p className={`text-xs sm:text-sm leading-relaxed text-start opacity-90 mt-1 sm:mt-2 lg:mt-3 ${image ? 'max-w-[280px] sm:max-w-[320px] lg:max-w-[380px] relative z-10' : ''}`}>
@@ -93,7 +87,7 @@ const BentoCard = ({ title, description, image, isLarge, glow, borderGradient })
                 <Image 
                     src={image} 
                     alt={`${title} background`} 
-                    className='absolute top-0 right-0 opacity-60 pointer-events-none z-10 w-32 h-auto sm:w-44 md:w-56 lg:w-[250px]' 
+                    className='absolute top-0 right-0 opacity-60 pointer-events-none z-10 w-32 h-auto sm:w-44 md:w-56 lg:w-[250px] hidden md:block' 
                     width={250} 
                     height={270} 
                 />
