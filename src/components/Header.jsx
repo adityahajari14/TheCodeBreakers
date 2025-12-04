@@ -15,7 +15,7 @@ const Header = () => {
   };
 
   return(
-    <header className="fixed top-0 w-full z-50 flex justify-center items-center font-['Montserrat'] font-medium max-lg:px-2">
+    <header className="fixed top-0 w-full z-50 flex justify-center items-center font-['Montserrat'] font-medium px-4 sm:px-6 md:px-4 pt-5 sm:pt-6 md:pt-7">
       <GlassSurface 
         width={null} 
         height={null} 
@@ -27,11 +27,11 @@ const Header = () => {
         distortionScale={30} 
         backgroundOpacity={0.7}
         additionalClasses="flex-col lg:flex-row"
-        className="lg:w-[60vw] max-lg:w-[95vw] h-auto min-h-[64px] lg:min-h-[9vh] max-lg:mx-2 lg:my-6 max-lg:my-3 relative flex flex-col lg:flex-row justify-center items-center py-3 lg:py-0"
+        className="w-full sm:w-[92vw] md:w-[85vw] lg:w-[60vw] h-auto min-h-[36px] lg:min-h-[48px] relative flex flex-col lg:flex-row justify-center items-center py-0 lg:py-0"
       >
-        <div className="w-full flex flex-row justify-between items-center lg:px-6 max-lg:px-4">
+        <div className="w-full flex flex-row justify-between items-center lg:px-6 max-lg:px-3">
           <Link href="/">
-            <img src="./tcb.webp" alt="TCB Logo" className="lg:w-12 lg:h-12 max-lg:w-10 max-lg:h-10 aspect-square" />
+            <img src="./tcb.webp" alt="TCB Logo" className="lg:w-10 lg:h-10 max-lg:w-7 max-lg:h-7 aspect-square" />
           </Link>
           
           <nav className="hidden lg:block">
@@ -76,7 +76,7 @@ const Header = () => {
           </div>
 
           <button 
-            className="lg:hidden text-white focus:outline-none z-50 transition-transform duration-300 p-2 touch-manipulation min-h-[44px] min-w-[44px] flex items-center justify-center"
+            className="lg:hidden text-white focus:outline-none z-50 transition-transform duration-300 p-1 touch-manipulation min-h-[40px] min-w-[40px] flex items-center justify-center"
             onClick={toggleMobileMenu}
             aria-label="Toggle menu"
             aria-expanded={isMobileMenuOpen}

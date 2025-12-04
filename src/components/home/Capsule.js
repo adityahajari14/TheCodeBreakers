@@ -1,11 +1,11 @@
 export default function Capsule({activeTab, setActiveTab}) {
 
   return(
-    <div className="flex justify-center lg:mb-6 max-lg:mb-6 lg:mt-8 max-lg:mt-6 max-lg:px-4">
-                    <div className="relative flex bg-[rgba(91,91,91,0.06)] rounded-full p-1 border-2 border-white/25 overflow-hidden shadow-[10px_10px_40px_10px_rgba(255,255,255,0.07)_inset,0_10px_40px_2px_rgba(0,0,0,0.07)] blur-[6px">
+    <div className="flex justify-center lg:mb-6 max-lg:mb-4 lg:mt-8 max-lg:mt-4">
+                    <div className="relative flex bg-[rgba(91,91,91,0.06)] rounded-full p-1 border-2 border-white/25 overflow-hidden shadow-[10px_10px_40px_10px_rgba(255,255,255,0.07)_inset,0_10px_40px_2px_rgba(0,0,0,0.07)]">
                         <button
                             onClick={() => setActiveTab("tech")}
-                            className={`relative px-7 py-2 rounded-full transition-all max-lg:touch-manipulation max-lg:min-h-[44px] ${activeTab === "tech"
+                            className={`relative lg:px-7 max-lg:px-5 lg:py-2 max-lg:py-1.5 rounded-full transition-all max-lg:touch-manipulation max-lg:min-h-[40px] lg:text-base max-lg:text-sm ${activeTab === "tech"
                                 ? "text-white font-semibold transition-transform duration-200"
                                 : "text-white hover:text-gray-300 "
                                 }`}
@@ -21,7 +21,7 @@ export default function Capsule({activeTab, setActiveTab}) {
                         </button>
                         <button
                             onClick={() => setActiveTab("nontech")}
-                            className={`relative px-7 py-2 rounded-full transition-all max-lg:touch-manipulation max-lg:min-h-[44px] ${activeTab === "nontech"
+                            className={`relative lg:px-7 max-lg:px-5 lg:py-2 max-lg:py-1.5 rounded-full transition-all max-lg:touch-manipulation max-lg:min-h-[40px] lg:text-base max-lg:text-sm ${activeTab === "nontech"
                                 ? "text-white font-semibold transition-transform duration-200"
                                 : "text-white hover:text-gray-300"
                                 }`}
